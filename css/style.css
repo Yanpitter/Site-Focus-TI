@@ -1,0 +1,436 @@
+/* ===== VARIÁVEIS DE TEMA (modo escuro por padrão) ===== */
+:root{
+  --bg:#0b0f14; /* Cor de fundo principal */
+  --text:#e6eef8; /* Cor do texto */
+  --primary:#4ea1ff; /* Cor primária (links, títulos) */
+  --muted:#9fb2c8; /* Cor de textos secundários */
+  --card:#0f1720; /* Fundo dos cards */
+  --accent:#00d4ff; /* Cor de destaque */
+}
+
+/* ===== VARIÁVEIS PARA O TEMA CLARO ===== */
+[data-theme="light"]{
+  --bg:#ffffff;
+  --text:#222;
+  --primary:#1e6fff;
+  --muted:#666;
+  --card:#f7f9ff;
+  --accent:#1e6fff;
+}
+
+/* ===== RESET BÁSICO ===== */
+*{box-sizing:border-box} /* Inclui padding e borda no cálculo de largura/altura */
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color:var(--text);
+  background:var(--bg);
+  transition:background.25s,color .25s; /* Suaviza a troca de tema */
+} 
+
+ /* ===== LAYOUT BASE ===== */
+ .container{
+  max-width:1100px; /* largura máxima */
+  margin:0 auto; /*centraliza */
+  padding:1rem;
+} 
+
+  /* ===== CABEÇALHO ===== */
+.site-header{
+  background:transparent;
+  border-bottom:1px solid rgba(255,255,255,0.04) /* linha bem sutil */
+} 
+
+
+.header-inner{
+  display:flex; /* Alinha em linha */
+  align-items:center; /* Centraliza verticalmente */
+  justify-content:space-between; /* Espaço entre logo e menu */
+  padding:1rem;
+}
+
+.logo{
+  font-weight:700;
+  font-size:1.2rem;
+  color:var(--accent);
+  text-decoration:none;
+}
+
+.nav{
+  display:flex;
+  gap:0.75rem; /* Espaço entre links */
+} 
+
+.nav-link{
+  padding:0.5rem 0.75rem;
+  text-decoration:none;
+  color:var(--text);
+  border-radius:8px;
+  opacity:0.9;
+}
+
+  .nav-link:hover{
+    background:rgba(255,255,255,0.02);
+  }
+
+.nav-link.active{
+  background:linear-gradient(90deg, rgba(78,161,255,0.12), rgba(0,212,255,0.06));
+  color:var(--primary);
+  box-shadow:0 4px 18px rgba(78,161,255,0.06);
+}
+
+.header-actions{
+  display:flex;
+  gap:0.5rem;
+  align-items:center;
+}
+
+.menu-toggle{
+  display:none; /* Só aparece no mobile */
+  background:transparent;
+  border:0;color:var(--text);
+  font-size:1.2rem;
+  padding:0.4rem;
+  border-radius:6px;
+}
+
+/* ===== HERO (parte inicial do site) ===== */
+.hero{padding:2rem 0}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr 480px; /* texto e imagem/carrossel lado a lado */
+  gap:1.5rem;
+  align-items:center
+}
+.hero-text h1{margin:0 0 0.5rem;
+  font-size:2rem;
+  color:var(--text);
+}
+.hero-text p{color:var(--muted)}
+.btn{
+  display:inline-block;
+  padding:0.6rem 1rem;
+  border-radius:8px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  color:#fff;
+  text-decoration:none;
+  border:0;
+  box-shadow:0 6px 20px rgba(78,161,255,0.12)
+}
+
+/* Carousel */
+.hero-carousel{
+  position:relative;
+  overflow:hidden;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.03)
+}
+.carousel-track{display:flex;
+  transition:transform 0.45s ease;
+}
+.carousel-item{
+  width:480px;
+  height:260px;
+  object-fit:cover;
+  filter:brightness(0.9);
+}
+.carousel-controls{
+  position:absolute;
+  bottom:8px;
+  right:8px;
+  display:flex;gap:6px;
+}
+.carousel-controls button{
+  background:rgba(0,0,0,0.45);
+  border:0;
+  padding:0.4rem 0.5rem;
+  border-radius:6px;
+  color:#fff;
+}
+
+/* ===== CARDS (Serviços no preview) ===== */
+.services-preview{padding:2rem 0}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;
+}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:1rem;
+  border-radius:10px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.02)
+}
+.card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:6px;
+}
+
+/* ===== SOBRE / FOOTER PREVIEW ===== */
+.about-preview{padding:2rem 0}
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);
+  padding:1rem 0;
+  background:transparent;
+}
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:center;
+  color:var(--muted)
+}
+
+/* ===== BOTÃO VOLTAR AO TOPO ===== */
+#back-to-top{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  padding:0.5rem 0.6rem;
+  border-radius:50%;
+  display:none;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  border:0;color:#fff;
+  box-shadow:0 8px 24px rgba(0,0,0,0.4)
+}
+
+/* ===== CONTATO ===== */
+.contact-form{max-width:640px;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem
+}
+.contact-form input,.contact-form textarea{padding:0.6rem;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:transparent;
+  color:var(--text)
+}
+.form-feedback{color:crimson}
+.map-container {
+  max-width: 900px;  /* Define uma largura máxima para o mapa */
+  width: 100%;       /* Faz o contêiner ocupar o espaço disponível */
+  height: 450px;     /* Define uma altura fixa para o mapa (ajuste se preferir) */
+  margin: 2rem auto 0 auto; /* Centraliza o contêiner na página (margem em cima, auto nas laterais) */
+  border-radius: 12px;
+  overflow: hidden;  /* Garante que o iframe respeite as bordas arredondadas */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacar */
+}
+
+/* Mapa responsivo */
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0; /* Remove a borda padrão do iframe */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .carousel-item{width:100%;height:200px}
+  .menu-toggle{display:inline-block}
+  .nav{display:none;position:absolute;
+    top:64px;
+    right:16px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:0.75rem;
+    border-radius:8px;
+    flex-direction:column;
+  }
+  .nav.open{display:flex} /* quando abre no mobile */
+}
+
+/* ===== UTILITÁRIOS ===== */
+.hidden{display:none}
+
+/* ===== SEÇÃO VALORES ===== */
+.valores {
+  background-color: #111; /* fundo escuro */
+  padding: 50px 20px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.valores h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--muted); /* destaque no título */
+}
+
+/* Lista de valores */
+.valores ul {
+  list-style: none; /* remove os pontos */
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.valores li {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05); /* fundo levinho */
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Efeito hover */
+.valores li:hover {
+  background: rgba(77, 166, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+/* ===== SEÇÃO SOBRE ===== */
+.sobre {
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--bg);
+  color: var(--muted);
+}
+
+.sobre h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--muted);
+}
+
+.sobre p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Cards padrão (Missão, Visão, Valores) */
+.cards-sobre {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.cards-sobre .card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cards-sobre .card:hover {
+  background: rgba(77, 166, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+.cards-sobre h3 {
+  margin-bottom: 15px;
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+/* Lista de valores dentro dos cards */
+.cards-sobre .valores ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cards-sobre .valores li {
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.cards-sobre .valores li:hover {
+  background: rgba(77, 166, 255, 0.2);
+}
+
+/* Estilos específicos para o tema claro na seção "Sobre" */
+
+/* 1. Muda o fundo e a cor do texto principal da seção "Sobre" */
+[data-theme="light"] .sobre {
+  background: var(--bg);
+  color: var(--muted);
+}
+
+/* 2. Muda o fundo e a borda dos cards "Missão", "Visão" e "Valores" */
+[data-theme="light"] .cards-sobre .card {
+  background: var(--card);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 3. Ajusta o efeito de passar o mouse sobre os cards */
+[data-theme="light"] .cards-sobre .card:hover {
+  background: rgba(30, 111, 255, 0.08);
+}
+
+/* 4. Muda a cor dos títulos (h3) dentro dos cards */
+[data-theme="light"] .cards-sobre h3 {
+  color: var(--primary);
+}
+
+/* 5. Muda o fundo dos itens da lista dentro do card "Valores" */
+[data-theme="light"] .cards-sobre .valores li {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* 6. Ajusta o efeito de passar o mouse sobre os itens da lista */
+[data-theme="light"] .cards-sobre .valores li:hover {
+  background: rgba(30, 111, 255, 0.2);
+}
+
+/* ===== PÁGINA DE SERVIÇOS ===== */
+
+/* Contêiner para a lista de serviços */
+.lista-servicos {
+  display: grid;
+  gap: 1.5rem; /* Espaçamento entre os cards */
+  max-width: 750px; /* Limita a largura para melhor legibilidade */
+  margin: 0 auto; /* Centraliza a lista na página */
+}
+
+/* Estilo individual de cada card de serviço */
+.servico-item {
+  background: var(--card); /* Usa a cor de fundo do card do tema */
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center; /* Centraliza o texto como você sugeriu */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de hover para dar interatividade */
+.servico-item:hover {
+  transform: translateY(-6px); /* Efeito de "levantar" o card */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+/* Estilo para o título de cada serviço */
+.servico-item h3 {
+  color: var(--primary); /* Usa a cor primária do tema */
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+/* Estilo para a descrição do serviço */
+.servico-item p {
+  color: var(--muted); /* Usa a cor de texto secundária */
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Ajustes para o Tema Claro */
+[data-theme="light"] .servico-item {
+  border-color: rgba(0, 0, 0, 0.08); /* Borda mais sutil para o fundo branco */
+}
+
+[data-theme="light"] .servico-item:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+ } /* Sombra mais sutil para o tema claro */
