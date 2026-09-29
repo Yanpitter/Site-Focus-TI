@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark"> <!-- Define que o documento é HTML5 e o idioma é português do Brasil, iniciando com o tema "dark" -->
+<head>
+  <meta charset="utf-8" /> <!-- Define o conjunto de caracteres (UTF-8, que suporta acentos) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Faz o site ser responsivo em dispositivos móveis -->
+  <title>Focus TI — Sobre</title> <!-- Título que aparece na aba do navegador -->
+  <link rel="stylesheet" href="css/style.css" /> <!-- Importa o arquivo CSS externo -->
+</head>
+<body>
+
+  <!-- Cabeçalho do site -->
+  <header class="site-header">
+    <div class="container header-inner"> <!-- Container para alinhar os elementos do header -->
+      <a href="index.html" class="logo">Focus TI</a> <!-- Logo que leva para a página inicial -->
+      <nav class="nav" id="main-nav"> <!-- Menu de navegação -->
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="sobre.html" class="nav-link active">Sobre</a> <!-- Página atual marcada como "ativa" -->
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+      </nav>
+      <div class="header-actions"> <!-- Ações no canto direito do header -->
+        <button id="theme-toggle-2" aria-label="Alternar tema">🌓</button> <!-- Botão para trocar o tema claro/escuro -->
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button> <!-- Botão do menu responsivo (mobile) -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal da página -->
+  <main class="container about-page">
+    <section class="sobre"> <!-- Seção com informações sobre a empresa -->
+  <div class="container">
+    <h2>Sobre a Focus TI</h2> <!-- Título da seção -->
+    <p>
+      A Focus TI nasceu com a missão de apoiar micro, pequenas e médias empresas na jornada de transformação digital.
+    </p>
+
+    <!-- Bloco com os cartões de Missão, Visão e Valores -->
+    <div class="cards-sobre">
+      <article class="card"> <!-- Card de Missão -->
+        <h3>Missão</h3>
+        <p>Entregar soluções tecnológicas confiáveis que gerem valor para os clientes.</p>
+      </article>
+
+      <article class="card"> <!-- Card de Visão -->
+        <h3>Visão</h3>
+        <p>Ser referência regional em inovação e qualidade até 2030.</p>
+      </article>
+
+      <article class="card valores"> <!-- Card de Valores -->
+        <h3>Valores</h3>
+        <ul> <!-- Lista de valores da empresa -->
+          <li>Ética</li>
+          <li>Transparência</li>
+          <li>Foco no cliente</li>
+          <li>Inovação contínua</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <!-- Rodapé do site -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"> <!-- Informações da empresa -->
+        <strong>Focus TI</strong>
+        <p>Rua Castro Alves, 123 — Ipatinga, MG</p>
+      </div>
+      <div> <!-- Contatos -->
+        <p>Telefone: (31) 3829-1234</p>
+        <p>Email: contato@focusti.com.br</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Arquivo JavaScript que controla interações (menu mobile, tema, etc.) -->
+  <script src="js/main.js"></script>
+</body>
+</html>

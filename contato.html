@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark"> <!-- Tipo de documento e idioma -->
+<head>
+  <meta charset="utf-8" /> <!-- Suporte a acentos -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsividade -->
+  <title>Focus TI — Contato</title> <!-- Título da aba -->
+  <link rel="stylesheet" href="css/style.css" /> <!-- Estilos CSS -->
+</head>
+<body>
+  
+  <!-- ======= Cabeçalho ======= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      
+      <!-- Logo -->
+      <a href="index.html" class="logo">Focus TI</a>
+
+      <!-- Navegação -->
+      <nav class="nav" id="main-nav">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="sobre.html" class="nav-link">Sobre</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="contato.html" class="nav-link active">Contato</a> <!-- Página ativa -->
+      </nav>
+
+      <!-- Ações do cabeçalho -->
+      <div class="header-actions">
+        <button id="theme-toggle-4" aria-label="Alternar tema">🌓</button> <!-- Botão de tema -->
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button> <!-- Menu mobile -->
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= Conteúdo principal ======= -->
+  <main class="container contact-page">
+    <h1>Fale Conosco</h1>
+
+    <!-- Formulário de contato integrado com Netlify -->
+    <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      
+      <!-- Identificação do formulário para Netlify -->
+      <input type="hidden" name="form-name" value="contact" />
+
+      <!-- Campo escondido para evitar spam (honeypot) -->
+      <p class="hidden"><label>Não preencher: <input name="bot-field" /></label></p>
+
+      <!-- Campo Nome -->
+      <label for="name">Nome</label>
+      <input id="name" name="name" type="text" required>
+
+      <!-- Campo Email -->
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" required>
+
+      <!-- Campo Mensagem -->
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <!-- Botão de envio -->
+      <button type="submit" class="btn">Enviar Mensagem</button>
+
+      <!-- Feedback do formulário (sucesso/erro) -->
+      <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+    </form>
+
+    <!-- Informações de contato -->
+    <section class="contact-info">
+      <h2>Onde nos encontrar</h2>
+      <p>Rua Castro Alves, 123 — Ipatinga, MG</p>
+      <p>Telefone: (31) 3829-1234</p>
+      <p>Email: contato@focusti.com.br</p>
+
+      <!-- Mapa integrado do Google Maps -->
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.703479608948!2d-42.561944700000005!3d-19.4683472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xafffc2bbe4d6d7%3A0x44f5cfa5edeb350c!2sR.%20Castro%20Alves%2C%20123%20-%20Cidade%20Nobre%2C%20Ipatinga%20-%20MG%2C%2035162-360!5e0!3m2!1spt-BR!2sbr!4v1758753874938!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Rodapé ======= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <!-- Marca e endereço -->
+      <div class="footer-brand">
+        <strong>Focus TI</strong>
+        <p>Rua Castro Alves, 123 — Ipatinga, MG</p>
+      </div>
+      <!-- Contatos -->
+      <div>
+        <p>Telefone: (31) 3829-1234</p>
+        <p>Email: contato@focusti.com.br</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão para voltar ao topo -->
+  <button id="back-to-top" title="Voltar ao topo">↑</button>
+
+  <!-- Script principal -->
+  <script src="js/main.js"></script>
+</body>
+</html>

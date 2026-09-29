@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark"> <!-- Define o tipo de documento e a linguagem do site -->
+<head>
+  <meta charset="utf-8" /> <!-- Define a codificação de caracteres para suportar acentos -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Torna o site responsivo em dispositivos móveis -->
+  <title>Focus TI — Inovação em Tecnologia</title> <!-- Título da aba do navegador -->
+  <link rel="stylesheet" href="css/style.css" /> <!-- Link para o arquivo de estilos CSS -->
+</head>
+<body>
+  
+  <!-- ======= Cabeçalho do site ======= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      
+      <!-- Logo do site -->
+      <a href="index.html" class="logo">Focus TI</a>
+      
+      <!-- Menu de navegação principal -->
+      <nav class="nav" id="main-nav">
+        <a href="index.html" class="nav-link active">Início</a>
+        <a href="sobre.html" class="nav-link">Sobre</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+      </nav>
+      
+      <!-- Ações no cabeçalho (botão de tema e menu mobile) -->
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="Alternar tema">🌓</button> <!-- Alterna tema claro/escuro -->
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button> <!-- Abre menu em dispositivos móveis -->
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======= Seção principal (Hero) ======= -->
+    <section class="hero">
+      <div class="container hero-inner">
+        
+        <!-- Texto principal de destaque -->
+        <div class="hero-text">
+          <h1>Construindo soluções digitais que impulsionam negócios</h1>
+          <p>Na Focus TI oferecemos desenvolvimento de software, consultoria em TI e soluções em nuvem para empresas que querem crescer com tecnologia.</p>
+          <a href="servicos.html" class="btn">Saiba Mais</a>
+        </div>
+        
+        <!-- Carrossel de imagens -->
+        <div class="hero-carousel" id="hero-carousel">
+          <div class="carousel-track">
+            <img src="img/banner1.jpg" alt="Banner 1" class="carousel-item">
+            <img src="img/banner2.jpg" alt="Banner 2" class="carousel-item">
+            <img src="img/banner3.jpg" alt="Banner 3" class="carousel-item">
+          </div>
+          
+          <!-- Botões de controle do carrossel -->
+          <div class="carousel-controls">
+            <button id="prev">◀</button>
+            <button id="next">▶</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ======= Prévia dos serviços ======= -->
+    <section class="services-preview">
+      <div class="container">
+        <h2>Nossos Serviços</h2>
+        <div class="cards">
+          
+          <!-- Card de serviço -->
+          <article class="card">
+            <img src="img/placeholder-service.jpg" alt="Desenvolvimento" />
+            <h3>Desenvolvimento de Software</h3>
+            <p>Aplicações sob medida: web, mobile e soluções corporativas.</p>
+          </article>
+          
+          <!-- Outro card -->
+          <article class="card">
+            <img src="img/placeholder-service2.jpg" alt="Cloud" />
+            <h3>Cloud & Infraestrutura</h3>
+            <p>Arquitetura, migração e gestão de ambientes na nuvem.</p>
+          </article>
+          
+          <!-- Outro card -->
+          <article class="card">
+            <img src="img/placeholder-service3.jpg" alt="Consultoria" />
+            <h3>Consultoria em TI</h3>
+            <p>Planejamento e otimização de processos e tecnologias.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ======= Prévia sobre a empresa ======= -->
+    <section class="about-preview">
+      <div class="container">
+        <h2>Quem somos</h2>
+        <p>Uma equipe multidisciplinar dedicada a transformar ideias em produtos digitais seguros e escaláveis.</p>
+        <a href="sobre.html" class="link">Leia nossa história</a>
+      </div>
+    </section>
+  </main>
+  
+  <!-- ======= Rodapé do site ======= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Focus TI</strong>
+        <p>Rua Castro Alves, 123 — Ipatinga, MG</p>
+      </div>
+      
+      <!-- Contatos -->
+      <div>
+        <p>Telefone: (31) 3829-1234</p>
+        <p>Email: contato@focusti.com.br</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Botão para voltar ao topo -->
+  <button id="back-to-top" title="Voltar ao topo">↑</button>
+  
+  <!-- Scripts JS para funcionalidades -->
+  <script src="js/carousel.js"></script> <!-- Lógica do carrossel -->
+  <script src="js/main.js"></script> <!-- Outras interações do site -->
+</body>
+</html>
